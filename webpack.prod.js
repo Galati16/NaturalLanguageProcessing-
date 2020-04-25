@@ -3,6 +3,7 @@ const path = require('path')
 const webpack = require('webpack')
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
+const WorkboxPlugin = require('workbox-webpack-plugin')
 
 module.exports = {
     entry: './src/client/index.js',
@@ -26,7 +27,7 @@ module.exports = {
     plugins: [
         new HtmlWebPackPlugin({
             template: "./src/client/views/index.html",
-            filename: "./index.html",
+            filename: "index.html",
         }),
         new CleanWebpackPlugin({
             // Simulate the removal of files
@@ -36,6 +37,11 @@ module.exports = {
             // Automatically remove all unused webpack assets on rebuild
             cleanStaleWebpackAssets: true,
             protectWebpackAssets: false
+        }),
+        new WorkboxPlugin.GenerateSW({
+            swDest: 'service-worker.js',
+            clientsClaim: true,
+            skipWaiting: true,
         })
     ]
 }
