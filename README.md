@@ -1,3 +1,18 @@
+# Which command do you need:
+compile in development enviroment use command:
+npm run build-dev
+
+compile in production enviroment use command:
+npm rund build-prod
+and start server: node ./src/server/index.js
+
+to run tests use:
+npm run test
+
+
+
+
+
 # Project Instructions
 
 This repo is your starter code for the project. It is the same as the starter code we began with in lesson 2. Install and configure Webpack just as we did in the course. Feel free to refer to the course repo as you build this one, and remember to make frequent commits and to create and merge branches as necessary!
