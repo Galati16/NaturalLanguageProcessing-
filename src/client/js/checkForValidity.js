@@ -4,10 +4,14 @@ function checkForValidity(suspect) {
     console.log("::: Running checkForValidity :::", suspect);
 
     if (validUrl.isUri(suspect)) {
-        console.log('Looks like an URI');
+        //'Looks like an URI'
+        return true;
+
     } else {
         console.log('Not a valid URI');
         alert('Not a valid URI');
+        return false;
+
     }
 }
 

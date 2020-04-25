@@ -54,7 +54,7 @@ app.post("/analyze", (req, res) => {
     })
 });
 
-module.exports = app;
+
 
 
 /* app.get('/test', function(req, res) {
