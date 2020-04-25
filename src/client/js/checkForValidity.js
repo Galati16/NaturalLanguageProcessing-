@@ -1,17 +1,13 @@
-function checkForValidity(inputText) {
-    console.log("::: Running checkForValidity :::", inputText);
-    let validOptions = [
-        "Picard",
-        "Janeway",
-        "Kirk",
-        "Archer",
-        "Georgiou"
-    ]
+function checkForValidity(suspect) {
+    var validUrl = require('valid-url');
 
-    if (names.includes(inputText)) {
-        console.log('Valid Option')
+    console.log("::: Running checkForValidity :::", suspect);
+
+    if (validUrl.isUri(suspect)) {
+        console.log('Looks like an URI');
     } else {
-        console.log('Error: You choose a wrong option!')
+        console.log('Not a valid URI');
+        alert('Not a valid URI');
     }
 }
 
