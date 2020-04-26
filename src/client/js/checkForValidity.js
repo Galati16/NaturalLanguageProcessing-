@@ -8,7 +8,6 @@ function checkForValidity(suspect) {
         return true;
 
     } else {
-        console.log('Not a valid URI');
         alert('Not a valid URI');
         return false;
 

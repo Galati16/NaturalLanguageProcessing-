@@ -34,29 +34,18 @@ app.listen(8080, function() {
     console.log('Example app listening on port 8080!')
 })
 
-/* textapi.sentiment({
-    'text': 'in my opinion John might be a very  bad football player!'
-}, function(error, response) {
-    if (error === null) {
-        console.log(response);
-    }
-}); */
 
-app.post("/analyze", (req, res) => {
-    console.log('im analyze post:', )
-    textapi.sentiment({
-        url: req.body.text
-    }, function(error, response) {
-        res.send(response)
-        if (error === null) {
-            console.log(response);
-        }
-    })
-});
+app.get('/save', function(req, res) {
+            res.json(mockAPIResponse);
 
-
-
-
-/* app.get('/test', function(req, res) {
-    res.send(mockAPIResponse)
-}) */
+            app.post("/analyze", (req, res) => {
+                console.log('im analyze post:', )
+                textapi.sentiment({
+                    url: req.body.text
+                }, function(error, response) {
+                    res.send(response)
+                    if (error === null) {
+                        console.log(response);
+                    }
+                })
+            });

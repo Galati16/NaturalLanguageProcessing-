@@ -20,7 +20,7 @@
     <main>
         <section>
             <h2>Is the website biased? Post its url and you will see:</h2>
-            <form class="" onsubmit="return myLib.buttonClicked(event)">
+            <form class="" onsubmit="return myLib.buttonClicked(event, 'run')">
                 <input id="name" type="text" name="input" value="" placeholder="Enter the URL you want to investigate here">
                 <input type="submit" name="" value="submit" onclick="return myLib.buttonClicked(event)" onsubmit="return myLib.buttonClicked(event)">
             </form>
@@ -36,6 +36,10 @@
                 <li>
                     <h3>Subjectivity:</h3>
                     <p id="subjectivity"></p>
+                </li>
+                <li>
+                    <h3>Your entered Text:</h3>
+                    <p id="text"></p>
                 </li>
             </ul>
         </section>
