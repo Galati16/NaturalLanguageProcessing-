@@ -35,9 +35,6 @@ app.listen(8080, function() {
 })
 
 
-app.get('/save', function(req, res) {
-            res.json(mockAPIResponse);
-
             app.post("/analyze", (req, res) => {
                 console.log('im analyze post:', )
                 textapi.sentiment({
